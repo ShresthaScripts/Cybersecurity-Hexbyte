@@ -1,0 +1,43 @@
+{
+  "name": "ScanResult",
+  "type": "object",
+  "properties": {
+    "scan_type": {
+      "type": "string",
+      "enum": [
+        "link",
+        "file",
+        "breach",
+        "network",
+        "scam",
+        "device"
+      ],
+      "default": "link"
+    },
+    "input_value": {
+      "type": "string"
+    },
+    "threat_score": {
+      "type": "number"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "safe",
+        "warning",
+        "danger"
+      ],
+      "default": "safe"
+    },
+    "details": {
+      "type": "string"
+    },
+    "recommendations": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "scan_type",
+    "input_value"
+  ]
+}
